@@ -1,15 +1,6 @@
-function I = integralpol1(a,b,c1,c2)
+% calculo de integrales
 
-pol = @(x) c1 + c2 * x;
+int1 = integralpol1(0,3,0,1);
+int2 = integralpol1(-1,1,-1,3);
 
-xx = linspace(a,b,1000);
-yy = zeros(1,xx.length);
-
-integral = 0;
-
-for i=1:xx.length
-    yy(i) = pol(xx(1));
-    integral = integral + abs(y(i));
-end
-I = integral;
-end
+fprintf("Resultados:\n%f\nf",int1,int2)
