@@ -7,8 +7,8 @@ v=1./x;  % '.' para evaluar componente a componente
 u=ones(5,1);
 t=zeros(5,1);
 
-length(u); % n´umero de componentes de x
-size(u); % n´umero de filas y numero de columnas de x
+length(u); % numero de componentes de x
+size(u); % numero de filas y numero de columnas de x
 
 x=[1 2 3 4];
 y=[1;2;3;4];
