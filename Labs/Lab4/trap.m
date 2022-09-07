@@ -4,7 +4,9 @@ x = linspace(a,b,n+1);
 aux = zeros(1,n);
 
 for i=1:n
-    aux(i) = (f(x(i)) + f(x(i+1)))*(x(i+1)-x(i))/2;
+    a = x(i);
+    b = x(i + 1);
+    aux(i) = (f(a) + f(b))*(b-a)/2;
 end
 
 T = sum(aux);
