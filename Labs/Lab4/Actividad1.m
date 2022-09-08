@@ -24,5 +24,3 @@ t = trap(-1,1,f,40);
 fprintf("integral 2 con N = 40: %f\n",t)
 t = trap(-1,1,f,80);
 fprintf("integral 2 con N = 80: %f\n",t)
-
-
