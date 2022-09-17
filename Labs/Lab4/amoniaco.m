@@ -27,13 +27,24 @@ fprintf("Diferencia anterior: %f\n", dif)
 
 % coefs. de pols. de interpolacion
 s = spline(v,p);
+h = 0.05; % obtenido del enunciado e)
+I = 0;
+
+% debido al problema indicado en linea 44
+% solamente se itera una vez
 for i=1:6
+    q = @(x) 0;
+    for j=0:3
+        q = @(x) q(x) + x^(3-j) * s.coefs(i,j+1);
+    end
+    q(0.5) % ¿Porque no es 1400?
 
-q = @(x) 0;
-for j=0:3
-    q = @(x) q(x) + x^(3-j) * s.coefs(i,j+1);
+    a = v(i);
+    b = v(i + 1);
+    n = (b - a) / h; % n no siempre es entero
+    I = I + trap(a,b,q,n);
+    
 end
 
-end
-
-q(0.5) % ¿Porque no es 1400?
+% ejercicio e
+fprintf("Integral de spline: %f\n", I)
