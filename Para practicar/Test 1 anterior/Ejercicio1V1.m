@@ -1,4 +1,4 @@
-function [z,y] = Ejercicio1(f)
+function [z,y] = Ejercicio1V1(f)
 
 z = linspace(0,2,200);
 y = zeros(1,200);
