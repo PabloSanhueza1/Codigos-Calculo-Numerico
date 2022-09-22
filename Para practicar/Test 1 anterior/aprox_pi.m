@@ -13,6 +13,6 @@ while(dif>10^-6)
     sub = 2 * sub;
 end
 
-fprintf("ultimo n: %d\n",sub-1)
+fprintf("ultimo n: %d\n",sub)
 dif = abs(4 * I2 - pi);
 fprintf("dif: %f\n",dif)
