@@ -38,5 +38,5 @@ error = abs(I-t);
 fprintf("Error: %f\n",error);
 
 t = trap(a,b,f,8);
-error = abs(I-t);S
+error = abs(I-t);
 fprintf("Error: %f\n",error);

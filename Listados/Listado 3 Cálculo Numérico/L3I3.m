@@ -14,14 +14,14 @@ I = -(cos(b)-cos(a));
 % Simpson
 fprintf("Regla de Simpson:\n");
 
-s = pmedio(a,b,f,2*2);
+s = simpson(a,b,f,2*2);
 error = abs(I-s);
 fprintf("Error: %f\n",error);
 
-s = pmedio(a,b,f,3*2);
+s = simpson(a,b,f,3*2);
 error = abs(I-s);
 fprintf("Error: %f\n",error);
 
-s = pmedio(a,b,f,4*2);
+s = simpson(a,b,f,4*2);
 error = abs(I-s);
 fprintf("Error: %f\n",error);
