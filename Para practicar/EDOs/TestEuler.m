@@ -30,4 +30,4 @@ t_graf = linspace(a,b,100);
 
 figure
 plot(x,y,'or',t_graf,y_exacta(t_graf),'b')
-legend("aprox. por Euler","Sol. exacta")
+legend("Aprox. por Euler","Sol. exacta")
