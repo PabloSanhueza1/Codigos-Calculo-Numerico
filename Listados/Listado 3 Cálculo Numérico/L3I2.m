@@ -14,7 +14,7 @@ I = -(cos(b)-cos(a));
 % punto medio
 fprintf("Regla de punto medio:\n");
 
-pm = pmedio(a,b,f,2);
+pm = pmedio(a,b,f,1);
 error = abs(I-pm);
 fprintf("Error: %f\n",error);
 

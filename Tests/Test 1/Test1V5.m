@@ -11,6 +11,7 @@ while dif > 1*10^-12
     fprintf("Cargando, vamos en n = %d\n",n);
     I2 = simpson2(1/(n-1),1,cota);
     dif = abs(I1 - I2);
+    
 end
 
 clc
