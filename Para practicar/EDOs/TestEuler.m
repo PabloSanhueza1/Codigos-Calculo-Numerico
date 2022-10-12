@@ -8,7 +8,7 @@ y0 = 1;
 
 n = 1000;
 
-[x,y] = euler(y0,a,b,f,n);
+[x,y] = eulerExplicito(y0,a,b,f,n);
 
 fprintf("Valores en x:\n")
 for i = 1: length(x)
