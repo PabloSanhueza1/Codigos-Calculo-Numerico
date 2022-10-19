@@ -36,12 +36,12 @@ f1 = @(x,y) [-y(2,:)+2*x+exp(x); y(1,:)-x^2+y(2,:)];
 
 xx = linspace(a1,b1,n+1);
 yy1_y = xx.^2;
-yy1_w = exp(xx);
+yy1_z = exp(xx);
 
 figure(1)
-plot(x1,y1,"or",xx,yy1_y,"-b",xx,yy1_w,"-g")
+plot(x1,y1(1,:),"or",x1,y1(2,:),"oy",xx,yy1_y,"-b",xx,yy1_z,"-g")
 title("Exacta vs Euler explicito","FontSize",15)
-legend("Aprox. Euler","y(x)","z(x)","Location","Best")
+legend("Aprox. Euler de y","Aprox. Euler de z","y(x)","z(x)","Location","Best")
 
 %ejercicio b
 a2 = 0;
@@ -56,6 +56,6 @@ yy2_y = exp(xx);
 yy2_w = xx;
 
 figure(2)
-plot(x2,y2,"or",xx,yy2_y,"-b",xx,yy2_w,"-g")
+plot(x2,y2(1,:),"or",x2,y2(2,:),"oy",xx,yy2_y,"-b",xx,yy2_w,"-g")
 title("Exacta vs Euler explicito","FontSize",15)
-legend("Aprox. Euler","y(t)","w(t)","Location","Best")
+legend("Aprox. Euler de y","Aprox. Euler de w","y(x)","w(x)","Location","Best")
