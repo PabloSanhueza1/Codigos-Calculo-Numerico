@@ -1,4 +1,4 @@
-function [x,y] = eulerSistemas(y0,a,b,f,n)
+function [x,y] = eulerSistemasExplicito(y0,a,b,f,n)
 
 %y0 debe ser vector columna
 h = (b-a)/n;
