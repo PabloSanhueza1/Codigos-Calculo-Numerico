@@ -1,13 +1,13 @@
-function [x,y] = eulerSistemasImplicito(f,a,b,y0,n)
+function [x,y] = eulerSistemasImplicito(y0,a,b,f,n)
 
 
 %y0 debe ser columna
-h = (b-a)/n
+h = (b-a)/n;
 y = [];
 x = [];
 
-y(:,1) = y0;
 x(1) = a;
+y(:,1) = y0;
 
 for i = 1 : n
   x(i+1) = x(i) + h;
