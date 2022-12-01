@@ -15,8 +15,18 @@ P = [5.03 4.71 4.40 3.97 3.88 3.62 3.3 3.15 3.08 2.92 2.7];
 
 % el sistema queda
 % b = Ax
-% [y1...yn] = [1...1n;F1...Fn]*[n0;-n0ab]
+% [y1...yn] = [1...1n;F1...Fn]*[n0;-n0a]
 
 %- item b -%
 b = P;
 A = [ones(length(F),1), F];
+
+%- item c -%
+x = (A'*A)\(A'*b);
+n0 = x(1);
+a = (x(2)/n0)*-1;
+
+M = @(t) n0-n0*a*t;
+plot(linspace(0,14,200),M(linspace(0,14,200)))
+prediccion = M(F(end)+2);
+fprintf("La concentracion de iones a los 12s sera de %f\n", prediccion)
