@@ -27,7 +27,11 @@ x = (A'*A)\(A'*b);
 n0 = x(1);
 a = (x(2)/n0)*-1;
 
+%- item d -%
 M = @(t) n0-n0*a*t;
-plot(linspace(0,14,200),M(linspace(0,14,200)))
+xgrafico = linspace(0,14,200);
+plot(xgrafico,M(xgrafico))
+
+%- item e -%
 prediccion = M(F(end)+2);
 fprintf("La concentracion de iones a los 12s sera de %f\n", prediccion)
