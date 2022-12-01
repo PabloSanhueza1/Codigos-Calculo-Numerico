@@ -3,6 +3,7 @@ clc
 
 F = [0 1 2 3 4 5 6 7 8 9 10];
 P = [5.03 4.71 4.4 3.97 3.88 3.62 3.3 3.15 3.08 2.92 2.7];
+P = P*10^-4;
 
 %- item a -%
 %    y = n0/(1+n0at)
@@ -36,3 +37,5 @@ legend("funcion obtenida","datos de tabla")
 %- item e -%
 prediccion = M(F(end)+2);
 fprintf("La concentracion de iones a los 12s sera de %f\n", prediccion)
+fprintf("Note que, a diferencia de la tabla, este resultado ya esta\n")
+fprintf("multiplicado por 10^-4\n")
